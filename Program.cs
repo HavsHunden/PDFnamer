@@ -21,6 +21,8 @@ namespace PDFnamer
             //Bitmap image = new Bitmap(@"test.png");
             Console.WriteLine(image.Size.Width);
             Console.ReadKey();
+
+            //Språkfilerna måste packas upp och läggas på rätt plats. Alternativt ge platsen en absolut sökväg. 
             TesseractEngine engine = new TesseractEngine(@"./tessdata", "swe", EngineMode.Default);
             Page results = engine.Process(image);
 
